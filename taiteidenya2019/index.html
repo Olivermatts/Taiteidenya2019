@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11">
+    <title>Taiteiden yä</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v1.4.0/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v1.4.0/leaflet.js'></script>
+    <header>
+      <div class="stars"></div>
+      <div class="twinkling"> 
+          <a href="index.html"><img src="image/550_2018-08-22T15-49-18--159049051215-removebg-preview.png" id="logo" class="center"/></a>
+      <!-- <img src="image/Taiteidenya_logo.PNG" class="center"/> -->
+      </head>
+  <body>
+      <h1 style="text-align: center">Taiteiden yä</h1>
+      <h3 style="text-align: center" style="font-family: Arial">-kaikille avoin kulttuuritapahtuma salossa 5.9.2019-</h3>
+    </div>
+  </header>
+      <div class="topnav" id="myTopnav">
+        <a href="https://www.facebook.com/events/2530009200350485/" class="fa fa-facebook" style="font-size: 16px; height: 19px; margin-top: 2px;"> Seuraa meitä facebookissa</a>
+        <!-- <a href=""><i class="fa fa-fw fa-envelope"></i>Contact</a> -->
+        <!-- <a href="lähetys/lomake.html"><i class="fa fa-fw fa-user"></i> Ilmoita uusitapahtuma</a> -->
+        <a href="toimijat.html"><i class="fa fa-user" style="font-size: 18px; height: 19px; margin-top: 2px"></i>Toimijat</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
+
+
+    <script type='text/javascript'>
+ window.test = function(e) {
+  if (e.value === 'AN01') {
+    map.setView([60.38495,23.12898], 17)
+
+  } else if (e.value === 'AN02') {
+    map.setView([60.383196, 23.127318 ], 17)
+
+  } else if (e.value === 'AN03') {
+    //map.panTo(new L.LatLng(60.45162,22.26687));
+    map.setView([60.389573, 23.103500], 17)
+  }
+
+  else if (e.value === 'AN04') {
+    //map.panTo(new L.LatLng(60.45162,22.26687));
+    map.setView([60.391298, 23.112060], 17)
+
+  } else if (e.value === 'AN05') {
+    //map.panTo(new L.LatLng(60.45162,22.26687));
+    map.setView([60.38663, 23.13244], 17)
+  }
+  else if (e.value === 'AN06') {
+    //map.panTo(new L.LatLng(60.45162,22.26687));
+    map.setView([60.388119, 23.117374], 17)
+  }
+}
+    </script>
+
+    <br>
+    <select name="navyOp" id="valitse_tapahtuma_alue" class="btn" onchange="test(this);">
+      <option selected hidden> Valitse tapahtuma-alue</option>
+      <option value="AN01">Tori</option>
+      <option value="AN02">Kulttuuritalo Villi alue</option>
+      <option value="AN03">Salo IoT Campus</option>
+      <option value="AN04">Astrum keskus</option>
+      <option value="AN05">Helsingintien tapahtuma-alue</option>
+      <option value="AN06">Salon taidemuseo Veturitalli</option>
+      
+      
+    </select>
+    <script>
+      function openWin() {
+        window.open("lähetys/lomake.html");
+      }
+      </script>
+      </head>
+      <body>
+      <!-- <input type="button" value="Ilmoita uusi Tapahtuma" onclick="openWin()"> -->
+
+      <!--
+        <script>
+          if(L.Browser.mobile) alert("Olet mobiililaitteessa");
+            //else alert("Et ole mobiililaitteessa");
+        </script> 
+        -->
+
+        
+      <script>
+        //Seuraava toteuttaa tapahtumien listaustoiminnon
+        function openWin2() {
+        //window.open("listatulostus/lista.html");
+        
+        /*var teksti="";
+        for(var i = 0; i < listausTalteen.Tapahtumat.length; i++)
+        {
+          var obj = listausTalteen.Tapahtumat[i];
+          teksti+=("Paikassa: " + obj.Järjestäjän_nimi + ", tapahtuma: " + obj.Tapahtumankuvaus + "\n-----\n");
+        }*/
+
+        submitJSON("listatulostus/lista.php", listausTalteen, "postParameter");
+      }
+
+/*
+    submit JSON as 'post' to a new page
+    Parameters:
+    path        (URL)   path to the new page
+    data        (obj)   object to be converted to JSON and passed
+    postName    (str)   name of the POST parameter to send the JSON
+*/
+function submitJSON( path, data, postName ) {
+    // convert data to JSON
+    var dataJSON = JSON.stringify(data);
+
+    // create the form
+    var form = document.createElement('form');
+    form.setAttribute('method', 'post');
+    form.setAttribute('action', path);
+
+    // create hidden input containing JSON and add to form
+    var hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", postName);
+    hiddenField.setAttribute("value", dataJSON);
+    form.appendChild(hiddenField);
+
+    // add form to body and submit
+    document.body.appendChild(form);
+    form.submit();
+}
+
+
+      //https://stackoverflow.com/questions/13734893/javascript-how-do-i-open-a-new-page-and-pass-json-data-to-it
+      //https://forums.asp.net/t/2050874.aspx?How+pass+array+in+window+open+in+Javascript+
+        </script>
+
+        </head>
+        <body>
+        <!-- <input type="button" value="Katso lista" onclick="openWin2()"> -->
+
+      
+    <br><br><br>
+
+    <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+
+    <style>
+      .valitse {
+       float: left;
+       width: 200px;
+       height: 300px;
+     }
+    </style>
+
+    <!-- Category lists-->
+    
+    <div class="row">
+        <div class="valitse">
+          <div>
+        <br>
+    <button type="button" class="btn" id="valitse_aika" onclick="Vaihda('valinnat')"> Valitse aika</button> 
+    <fieldset id="valinnat" class="dropdown" style="width:150px">
+      <input type="checkbox" name="rad" id="k1v1"> Kello 06-14<br>
+      <input type="checkbox" name="rad" id="k1v2"> Kello 14-18<br>
+      <input type="checkbox" name="rad" id="k1v3"> Kello 18-21<br>
+      <input type="checkbox" name="rad" id="k1v4"> Kello 21-
+    </fieldset>
+  </div>
+</div>
+    
+<div class="valitse">
+    <div>
+      <br>
+    <button type="button" class="btn" id="valitse_tapahtuma" onclick="Vaihda('valinnat2')"> Valitse Tapahtuma</button> 
+    <fieldset id="valinnat2" class="dropdown" style="width:200px">
+      <input type="checkbox" name="rad2" id="k2v1"> Elokuva<br>
+      <input type="checkbox" name="rad2" id="k2v2"> Näytelmä<br>
+      <input type="checkbox" name="rad2" id="k2v3"> Konsertti<br>
+      <input type="checkbox" name="rad2" id="k2v4"> Taide-esitys<br>
+      <input type="checkbox" name="rad2" id="k2v5"> Ruokatapahtuma
+    </fieldset>
+  </div>
+</div>
+</div>
+<div class="valitse">
+    <div>
+      <br>
+    <button type="button" class="btn" id="valitse_kategoria" onclick="Vaihda('valinnat3')"> Valitse Kategoria</button> 
+    <fieldset id="valinnat3" style="width:170px" class="dropdown">
+      <input type="checkbox" name="rad3" id="k3v1"> Musiikki<br>
+      <input type="checkbox" name="rad3" id="k3v2"> Kirjallisuus<br>
+      <input type="checkbox" name="rad3" id="k3v3"> Draama<br>
+      <input type="checkbox" name="rad3" id="k3v4"> Kotimainen<br>
+      <input type="checkbox" name="rad3" id="k3v5"> Komedia<br>
+      <input type="checkbox" name="rad3" id="k3v6"> Koko perheen<br>
+    </fieldset>
+  </div>
+</div>
+</div>
+
+   <!--  // Category lists-->
+
+   <!--  Search button for the category filter-->
+
+<div class="column">
+  <div class="card">
+    <br>
+      <button onclick="Suodata()" class="haenappi">Hae</button><br><br>
+      <button class="refresh" value="Refresh Page" onClick="history.go(0);">Nollaus</button>
+      
+  </div>
+</div>
+
+
+<!-- // Search button for the category filter-->
+<br><br><br><br><br><br>
+
+<div class="whitespace"></div>
+<div class="footer">
+  <p><a href="https://www.instagram.com/explore/tags/taiteideny%C3%A4/?hl=fi">#taiteidenyä</a></p>
+</div>
+
+
+<script>
+$(document).click(function (e) {
+    if (!$(e.target).hasClass("btn") 
+        && $(e.target).parents(".dropdown").length === 0) 
+    {
+        $(".dropdown").hide();
+    }
+  
+});
+
+</script>
+
+    <script type='text/javascript' src='leaf.js'></script>
+
+
+    <script type='text/javascript'>
+
+    window.onload = function()
+    {
+      var es=document.getElementById("valinnat").style.display='none';
+      var es=document.getElementById("valinnat2").style.display='none';
+      var es=document.getElementById("valinnat3").style.display='none';   
+    };
+
+    function Vaihda(v)
+    {
+      var es=document.getElementById(v).style;
+      if(es.display=='' || es.display=='none')
+        es.display='block';
+          else es.display='none';
+    }
+
+    function Suodata()
+    {
+      var checkboxit=["k1v1","k1v2","k1v3","k1v4","k2v1","k2v2","k2v3","k2v4","k2v5","k3v1","k3v2","k3v3","k3v4","k3v5","k3v6"];
+      //var checkbox_indeksit2=[[8],[14],[18,13,16],[7]];
+
+      //poistetaan ensin kaikki
+      for(var i=0;i<checkbox_indeksien_maara;i++)
+        for(var j=0;j<checkbox_indeksien_pituudet[i];j++)
+          map.removeLayer(talteenMarkers[checkbox_indeksit[i][j]-1]);
+
+      //lisätään markkereita
+      for(var i=0;i<checkbox_indeksien_maara;i++)
+        for(var j=0;j<checkbox_indeksien_pituudet[i];j++)
+        {
+          var x=document.getElementById(checkboxit[i]);
+          if (x.checked==true)
+          {
+            map.addLayer(talteenMarkers[checkbox_indeksit[i][j]-1]);
+          }
+        }
+  }
+    </script>
+
+  </body>
+</html>

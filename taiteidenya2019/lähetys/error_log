@@ -1,0 +1,7 @@
+[19-Jul-2019 10:05:39 Europe/Helsinki] PHP Warning:  mysqli::__construct(): (HY000/2002): No such file or directory in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 8
+[19-Jul-2019 12:48:04 Europe/Helsinki] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 19
+[19-Jul-2019 12:48:53 Europe/Helsinki] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 19
+[19-Jul-2019 12:51:35 Europe/Helsinki] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 19
+[19-Jul-2019 12:57:28 Europe/Helsinki] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 19
+[19-Jul-2019 13:02:50 Europe/Helsinki] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 19
+[19-Jul-2019 13:05:54 Europe/Helsinki] PHP Warning:  mysqli_set_charset() expects parameter 1 to be mysqli, string given in /home3/eqnffvev/public_html/taiteidenya2019b/lähetys/lomake.php on line 19

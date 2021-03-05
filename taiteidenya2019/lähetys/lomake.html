@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11">
+    <title>Taiteiden yä</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/lomake.css">
+  </head>
+
+   <img src="../image/Taiteidenya_logo.PNG" class="center"/>
+  </head>
+   <body>
+       <h1 style="text-align: center">Taiteiden yä / tietojen syöttö</h1>
+       <h3 style="text-align: center" style="font-family: Arial">ilmoita tapahtuma</h3>
+ 
+      <style>
+  .column {
+   float: left;
+   width: 200px;
+ }
+     </style>
+     <div>
+       <p style="font-weight: bold">LUE OHJEET ENNEN TAPAHTUMAN ILOIMTAMISTA</p>
+        <button id="myBtn">Avaa ohjeet</button>
+         <!-- The Modal -->
+        <div id="myModal" class="modal">
+         <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p style="font-weight: bold">Täytä kaikki kohdat huolella</p>
+            <br>
+        <p>kuka järjestää, tapahtuman nimi <br>
+        minkä tyylinen tapahtuma <br> <p style="font-weight: bold">ESIM: MUSIIKKI, TEATERI,LAPSILLE...</p>
+        Koska alkaa ja milloin loppuu <br>  <p style="font-weight: bold">KELLON AIKA MUODOSSA 00:00</p>
+        Osoite missä järjestetään. Järjestän Yhteystiedot <br> <p style="font-weight: bold">EMAIL/PUH</p>
+        www sivut tai some sivu <br> Anna lyhyt kuvaus tapahmasta
+        Anna infoa <br> <p style="font-weight: bold">ESIM: TARVIIKO ILMOITTUA YMS...</p>
+        </p>
+          </div>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+    
+    <script type='text/javascript'>
+    function myfunction()
+    {
+      alert("jee");
+      e.preventDefault();//?
+    }
+  </script>
+  
+     
+      <form action="lomake.php" method="get">
+          <br>
+          Järjestäjän nimi <br> <input type="text" name="Jarjestajan_nimi" value=""/>
+          <br>
+          Tapahtuman nimi <br> <input type="text" name="Tapahtuman_nimi" value=""/>
+          <br>
+          <!--Kategorian nimi <br> <input type="text" name="Kategorian_nimi" value=""/>
+          <br>-->
+          Aloitusaika <br> <input type="text" name="Aloitus_Aika" value=""/> 
+          <br>
+          Päättymisaika <br> <input type="text" name="Paatymis_Aika" value=""/>
+          <br>
+          Osoite <br> <input type="text" name="Osoite" value=""/>
+
+          <br>
+          Latitude <br> <input type="text" name="latitude" value=""/>
+          <a href="../koordinaatit.html" style="color: #cc0000" target="_blank">Katso koordinaatit</a>
+          <br>
+          Longitude <br> <input type="text" name="longitude" value=""/>
+
+          <br>
+          Yhteystiedot <br>  <input type="text" name="Yhteystiedot" value=""/>
+          <br>
+          Järjestäjän nettisivut <br> <input type="text" name="Jarjestajan_nettisivut" value=""/>
+          <br>
+
+
+          Tapahtuman kuvaus <br> 
+          <textarea rows="5" cols ="50" name="Tapahtumankuvaus"></textarea>
+          <br>
+          Info <br>
+          <textarea rows="5" cols="50" name="tapahtumainfo"></textarea>
+          <br>
+
+
+          <article>
+            <div class="row">
+                <div class="column">
+                  <div class="card">
+                <br>
+            <button type="button" class="btn" onclick="Vaihda('valinnat')"> Valitse aika</button> 
+            <fieldset id="valinnat" class="dropdown" style="width:150px">
+              <input type="checkbox" name="rad1_1" id="k1v1"> Kello 06-14<br>
+              <input type="checkbox" name="rad1_2" id="k1v2"> Kello 14-18<br>
+              <input type="checkbox" name="rad1_3" id="k1v3"> Kello 18-21<br>
+              <input type="checkbox" name="rad1_4" id="k1v4"> Kello 21-
+            </fieldset>
+          </div>
+        </div>
+            
+        <div class="column">
+            <div class="card">
+              <br>
+            <button type="button" class="btn" onclick="Vaihda('valinnat2')"> Valitse Tapahtuma</button> 
+            <fieldset id="valinnat2" class="dropdown" style="width:150px">
+              <input type="checkbox" name="rad2_1" id="k2v1"> Elokuva<br>
+              <input type="checkbox" name="rad2_2" id="k2v2"> Näytelmä<br>
+              <input type="checkbox" name="rad2_3" id="k2v3"> Konsertti<br>
+              <input type="checkbox" name="rad2_4" id="k2v4"> Taide-esitys<br>
+              <input type="checkbox" name="rad2_5" id="k2v5"> Ruokatapahtuma<br>    <!--oli väärin-->
+            </fieldset>
+          </div>
+        </div>
+        </div>
+        <div class="column">
+            <div class="card">
+              <br>
+            <button type="button" class="btn" onclick="Vaihda('valinnat3')"> Valitse Kategoria</button> 
+            <fieldset id="valinnat3" style="width:150px" class="dropdown">
+              <input type="checkbox" name="rad3_1" id="k3v1"> Musiikki<br>
+              <input type="checkbox" name="rad3_2" id="k3v2"> Kirjallisuus<br>
+              <input type="checkbox" name="rad3_3" id="k3v3"> Draama<br>
+              <input type="checkbox" name="rad3_4" id="k3v4"> Kotimainen<br>
+              <input type="checkbox" name="rad3_5" id="k3v5"> Komedia<br>
+              <input type="checkbox" name="rad3_6" id="k3v6"> Koko perheen<br>
+            </fieldset>
+          </div>
+        </div>
+        </div>
+        </article>
+
+        <br><br>
+
+          <input type="submit" name="submit" value="Lähetä"/>
+          
+          <input type="button" value="Takaisin" onclick="self.close()">
+          
+        </form>
+        
+   </body>
+</html>
+  

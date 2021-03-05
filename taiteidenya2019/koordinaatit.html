@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+    <title>Taiteiden yä ver</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet/v1.4.0/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet/v1.4.0/leaflet.js'></script>
+  </head>
+
+  <body>
+    <div id="map"></div>
+
+    <script type='text/javascript'>
+    var map = L.map("map").setView([48.85, 2.35], 12);
+
+    map.panTo(new L.LatLng(60.384047, 23.12695));
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+map.on("click", function (event) {
+  alert("Tässä koordinaatit: " + event.latlng.toString());
+  L.marker(event.latlng).addTo(map);
+});
+
+
+    </script>
+
+<br><br>
+<b></b>Klikkaa karttaan ja kopioi koordinaatti</b>
+
+<br>
+<br>
+<button onclick="self.close();">Takaisin</button>
+
+
+</body>
+
+</html>

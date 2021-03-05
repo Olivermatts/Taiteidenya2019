@@ -1,0 +1,194 @@
+body {
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+#map {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    height: 500px;
+}
+
+#location {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#etsi {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#outer {
+    text-align: center;
+    border-style: solid;
+
+}
+
+#numero1 {
+    display: table;
+    display: table-row;
+    border-style: solid;
+    width: 50px;
+    height: 20px;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+    margin-right: 150px;
+    color: blue;
+}
+
+#numero2 {
+    display: table;
+    display: table-row;
+    border-style: solid;
+    width: 50px;
+    height: 20px;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+    color: green;
+}
+
+#teksti1 {
+    display: table;
+    display: table-row;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+#teksti2 {
+    display: table;
+    display: table-row;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+}
+
+#seuraava {
+    border-style: solid;
+    width: 50px;
+    height: 20px;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+    color: red;
+}
+
+#omanumero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#peruuta {
+    color: red;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+
+#arvio {
+    position: relative;
+    left: 105px;
+    color: purple;
+    font-size: 13px;
+    display: table;
+    display: table-row;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+}
+
+#arvio2 {
+    position: relative;
+    left: 105px;
+    color: purple;
+    font-size: 13px;
+    display: table;
+    display: table-row;
+    display: table-cell;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+

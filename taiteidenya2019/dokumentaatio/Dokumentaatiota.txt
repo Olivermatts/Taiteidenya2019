@@ -1,0 +1,34 @@
+Dokumentaatiota Taiteiden Yä - tapahtumaan Salossa 2019
+-------------------------------------------------------
+
+- Hae- eli suodatus-toiminnon kategoriat ovat numeroitu alkaen 1:stä jatkuen 15:toista. Eli tietokannassa sarakkeella "suodatus" kategoriat ovat pilkulla erotettuina. Tapahtumien syöttötoiminnossa voi valita kategorioita tapahtumalle klikkaamalla checkboxeja.
+
+- Nykyisessä tapahtumat-taulukossa suodatus-sarake ei kunnossa. Suodatus-sarakkeen tiedot syötettyävä käsin tai syötettävä kaikki tiedot itse ohjelman tietojensyöttötoiminnolla uudelleen.
+
+- Hakutoiminnon toteuttaa Suodata-funktio index.html-sivun riveillä 277-.
+
+- "Kategoria"-sarake tietokannassa on turha, sen on korvannut "suodatus"-sarake.
+
+- Kategoriat pääsivulta (checkboxit) ovat suoraan kopioituja uuden tapahtuman ilmoituslomake-sivulle, päivitys/lomake.html:ään. Jos niitä muutetaan, täytyy muuttaa kumpaankin paikkaan, sekä tarvittaessa index.html:ään checkboxit-taulukkoon riville 279.
+
+- Kartalta markkeria klikattaessa avautuvat popup-ikkunat ovat sisällöltään määritelty koodissa leaf.js-tiedostossa riveillä 75-119.
+
+- "Valitse tapahtuma-alue" -toiminnon koodi on index.html-sivulla riveillä 63-102.
+
+- Jos haluaa päivittää kerran syötettyjä tietoja, se täytyy tehdä tietokannan kautta phpmyadminilla tms.
+
+- Tietojensyöttölomakkeeseen pääsee myös osoitteella www.salo-campus/taiteidenya2019/lähetys/lomake.html
+
+- Käytetyn tietokannan nimi "eqnffvev_taiteidenya" sekä taulun nimi "tapahtumat" löytyy lataatietokanta.php:stä ja lomake.php:sta.
+
+- Webhotellin tunnus on "eqnffvev" ja salasana "NR2MKqx76y.(6c"
+
+- Jos asemoi samoihin koordinaatteihin useita tapahtumia, ne tulostuvat samaan popup-ikkunaan, mutta aloitus- ja päättymisaikojensa suhteen satunnaisesti. Ohjelma olettaa, että kaikilla popupin tapahtumilla on sama internetosoite ja tapahtuman nimi.
+
+- Jos hakutoiminnolla osuu tapahtumapaikkaan, jossa on monta tapahtumaa samassa osoitteessa, kaikki kyseisen lokaation tapahtumat tulostetaan popupiin.
+
+- Jos kartta ei lataudu Applen puhelimella esim. Firefoxilla tai Google Chromella, asenna ko. sovellukset uudelleen. Tietokoneella ongelma voi ratketa käynnistämällä tietokone uudelleen. Android-puhelimella jos markerit eivät näy tyhjennä selaushistoriat.
+
+- Uutisia voi lisätä tiedostoon uutiset.html
+
+- Koodilla "if(L.Browser.mobile)" voi koodata mobiilille/tavalliselle käyttölittymille erikseen.
